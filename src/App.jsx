@@ -17,7 +17,7 @@ const userID = useGetUserId()
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/recipes');
+        const response = await axios.get('https://mern-server-i4tx.onrender.com/recipes');
         setRecipes(response.data);
   
       } catch (error) {
@@ -29,7 +29,7 @@ const userID = useGetUserId()
 
     const fetchsavedRecipes = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/recipes/savedrecipes/id/${userID}`);
+        const response = await axios.get(`https://mern-server-i4tx.onrender.com/recipes/savedrecipes/id/${userID}`);
         setSavedrecipes(response.data);
         // console.log(response.data);
   
@@ -44,7 +44,7 @@ const userID = useGetUserId()
 
   const saveRecipe =async(recipeID)=>{
     try {
-      const response = await axios.put('http://localhost:3001/recipes',{recipeID,userID},{headers:{authorization:cookies.access_token}});
+      const response = await axios.put('https://mern-server-i4tx.onrender.com/recipes',{recipeID,userID},{headers:{authorization:cookies.access_token}});
   // console.log(response)
    toast.success("Saved Successfull")
       nav("/saved")

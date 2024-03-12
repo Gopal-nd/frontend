@@ -22,7 +22,7 @@ const Login = () => {
       const handleSubmit = async(e) => {
         e.preventDefault();
     try {
-        const newlogin = await axios.post('http://localhost:3001/auth/login',{username:formData.username,password:formData.password});
+        const newlogin = await axios.post('https://mern-server-i4tx.onrender.com/auth/login',{username:formData.username,password:formData.password});
 
 
         console.log(newlogin)

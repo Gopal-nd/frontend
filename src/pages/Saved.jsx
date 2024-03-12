@@ -15,7 +15,7 @@ const userID = useGetUserId()
 
     const fetchsavedRecipes = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/recipes/savedrecipes/${userID}`);
+        const response = await axios.get(`https://mern-server-i4tx.onrender.com/recipes/savedrecipes/${userID}`);
         setSavedrecipes(response.data.savedRecipes);
         // console.log(response.data);
   

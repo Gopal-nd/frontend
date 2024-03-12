@@ -20,7 +20,7 @@ const Register = () => {
       const handleSubmit = async(e) => {
         e.preventDefault();
         try {
-            const newRegister = await axios.post('http://localhost:3001/auth/register',{username:formData.username,password:formData.password});
+            const newRegister = await axios.post('https://mern-server-i4tx.onrender.com/auth/register',{username:formData.username,password:formData.password});
             toast.success('Successfully toasted!')
             nav('/login')
         } catch (error) {

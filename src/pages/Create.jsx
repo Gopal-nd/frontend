@@ -47,7 +47,7 @@ const Create = () => {
         e.preventDefault();
         console.log(formData)
         try {
-          const response = await axios.post('http://localhost:3001/recipes', formData,{headers:{authorization:cookies.access_token}});
+          const response = await axios.post('https://mern-server-i4tx.onrender.com/recipes', formData,{headers:{authorization:cookies.access_token}});
           toast.success("Create Successfully")
           navigate("/")
           console.log('Recipe added:', response.data);
